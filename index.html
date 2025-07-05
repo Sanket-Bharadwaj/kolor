@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Palette Generator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="header-content">
+                <h1 class="title">Color Palette Generator</h1>
+                <p class="subtitle">Create beautiful color combinations for your designs</p>
+                <div class="actions">
+                    <button id="generateBtn" class="btn btn-primary">
+                        <!-- ...existing SVG... -->
+                        Generate Palette
+                    </button>
+                    <button id="shareBtn" class="btn btn-secondary">
+                        <!-- ...existing SVG... -->
+                        Copy Link
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <!-- Add the pill here, just below header -->
+        <div style="display: flex; justify-content: center; margin: 1.5rem 0;">
+            <a href="https://github.com/Sanket-Bharadwaj" target="_blank" rel="noopener"
+               style="
+                   display: inline-flex;
+                   align-items: center;
+                   gap: 0.5rem;
+                   background: linear-gradient(90deg, #ff6f61 0%, #ffb86c 100%);
+                   color: #fff;
+                   font-weight: 500;
+                   font-size: 1rem;
+                   padding: 0.5rem 1.5rem;
+                   border-radius: 999px;
+                   box-shadow: 0 2px 8px 0 rgba(255,111,97,0.10);
+                   text-decoration: none;
+                   transition: box-shadow 0.2s, transform 0.2s;
+               "
+               onmouseover="this.style.boxShadow='0 4px 16px 0 rgba(255,111,97,0.18)';this.style.transform='translateY(-2px)';"
+               onmouseout="this.style.boxShadow='0 2px 8px 0 rgba(255,111,97,0.10)';this.style.transform='none';"
+            >  
+            </a>
+        </div>
+
+        <main class="main">
+            <section class="palette-section">
+                <div class="color-picker-ui" style="margin-bottom: 1rem; display: flex; align-items: center; gap: 1rem;">
+                    <label for="colorPicker" style="font-weight: 500;">Pick a color:</label>
+                    <input type="color" id="colorPicker" value="#ff6f61" style="width: 40px; height: 40px; border: none; background: none; cursor: pointer;">
+                    <input type="text" id="hexInput" value="#ff6f61" maxlength="7" style="width: 80px; font-size: 1rem; padding: 0.3rem; border-radius: 4px; border: 1px solid #ccc;">
+                    <button id="copyColorBtn" class="btn btn-secondary" title="Copy color hex">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"/>
+                            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+                        </svg>
+                    </button>
+                    <button id="shareColorBtn" class="btn btn-secondary" title="Copy shareable link">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/>
+                            <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/>
+                        </svg>
+                    </button>
+                </div>
+                <div class="palette-grid" id="paletteGrid">
+                    <!-- Color boxes will be generated here -->
+                </div>
+            </section>
+
+            <section class="preview-section" id="previewSection">
+                <div class="preview-header">
+                    <h2>Design System Preview</h2>
+                    <p>See how your palette works in a real interface</p>
+                </div>
+                <div class="preview-container" id="previewContainer">
+                    <!-- Preview will be generated here -->
+                    <div class="preview-card" id="previewCard">
+                        <!-- ...existing content... -->
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <div class="toast" id="toast">
+            <div class="toast-content">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M20 6L9 17l-5-5"/>
+                </svg>
+                <span id="toastMessage"></span>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+    <!-- Made with love pill at the bottom, glassmorphism, mobile-optimized -->
+    <div 
+        class="made-with-love-pill"
+        style="
+            position: fixed;
+            left: 50%;
+            bottom: 1.5rem;
+            transform: translateX(-50%);
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 1.5rem;
+            border-radius: 999px;
+            background: rgba(255,255,255,0.18);
+            box-shadow: 0 4px 24px 0 rgba(255,111,97,0.10);
+            backdrop-filter: blur(12px) saturate(180%);
+            -webkit-backdrop-filter: blur(12px) saturate(180%);
+            color: #ff6f61;
+            font-weight: 500;
+            font-size: 1rem;
+            text-decoration: none;
+            border: 1px solid rgba(255,255,255,0.25);
+            transition: box-shadow 0.2s, transform 0.2s;
+            max-width: 95vw;
+            white-space: nowrap;
+        "
+    >
+        <span style="font-size:1.2em;">❤️</span>
+        Made with love by 
+        <a href="https://github.com/Sanket-Bharadwaj" target="_blank" rel="noopener"
+           style="color:#ff6f61; font-weight:600; text-decoration:underline; background:transparent; transition:color 0.2s;">
+            Sanket Bharadwaj
+        </a>
+    </div>
+
+    <style>
+        @media (max-width: 600px) {
+            .made-with-love-pill {
+                font-size: 0.95rem !important;
+                padding: 0.4rem 1rem !important;
+                bottom: 0.75rem !important;
+                max-width: 98vw !important;
+            }
+        }
+    </style>
+</body>
+</html>
