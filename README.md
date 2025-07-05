@@ -1,6 +1,6 @@
-# 🎨 Kolor – Smart Color Palette Generator
+# 🎨 Kolorr – Smart Color Palette Generator
 
-**Kolor** is a sleek, mobile-friendly color palette generator built with pure HTML, CSS, and JavaScript. Instantly create, preview, and share beautiful palettes — perfect for UI designers, web developers, and product creators.
+**Kolorr** is a sleek, mobile-friendly color palette generator built with pure HTML, CSS, and JavaScript. Instantly create, preview, and share beautiful palettes — perfect for UI designers, web developers, and product creators.
 
 ---
 
@@ -30,7 +30,7 @@
 ## 🧱 Project Structure
 
 ```
-kolor/
+kolorr/
 ├── index.html    # Main structure and layout
 ├── style.css     # Visual styles and responsive design
 └── script.js     # Logic for color generation, sharing, and UI preview
@@ -39,7 +39,7 @@ kolor/
 ---
 
 ## 🌐 Live Demo
-
+https://kolorr.vercel.app/
 ---
 
 ## 🛠️ Tech Stack
@@ -86,7 +86,7 @@ Created with ❤️ by Sanket Bharadwaj
 
 1. Clone the repo  
    ```bash
-   git clone https://github.com/Sanket-Bharadwaj/kolor.git
+   git clone https://github.com/Sanket-Bharadwaj/kolorr.git
    cd kolor
    ```
 
