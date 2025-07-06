@@ -4,7 +4,8 @@
 
 ---
 ## 🌐 Live Demo
-https://kolorr.vercel.app/
+[Click Me!]{
+https://kolorr.vercel.app}
 ---
 
 ## 🚀 Features
