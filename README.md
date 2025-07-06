@@ -3,6 +3,9 @@
 **Kolorr** is a sleek, mobile-friendly color palette generator built with pure HTML, CSS, and JavaScript. Instantly create, preview, and share beautiful palettes — perfect for UI designers, web developers, and product creators.
 
 ---
+## 🌐 Live Demo
+https://kolorr.vercel.app/
+---
 
 ## 🚀 Features
 
@@ -37,9 +40,11 @@ kolorr/
 ```
 
 ---
+Screenshots
 
-## 🌐 Live Demo
-https://kolorr.vercel.app/
+![diagram](https://github.com/user-attachments/assets/c7cdc682-85ee-4ccf-af3c-ea8fa2ee4c98)
+
+
 ---
 
 ## 🛠️ Tech Stack
@@ -60,12 +65,6 @@ https://kolorr.vercel.app/
 - 💾 Save palettes to localStorage  
 - 🖼️ Upload image → extract color palette  
 - 📱 Turn into a PWA (installable app)
-
----
-
-## 📸 Screenshots
-
-> _(Add preview images here — color boxes, UI preview, mobile responsiveness, etc.)_
 
 ---
 
